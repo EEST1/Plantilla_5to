@@ -5,7 +5,7 @@ Linker command line:
 --edf=/opt/microchip/xc8/v1.35/dat/en_msgs.txt -cs \
   -h+dist/default/production/Plantilla_5to.X.production.sym \
   --cmf=dist/default/production/Plantilla_5to.X.production.cmf -z -Q18F4550 \
-  -o/tmp/xcXG9t5nk -Mdist/default/production/Plantilla_5to.X.production.map \
+  -o/tmp/xcXWimIUv -Mdist/default/production/Plantilla_5to.X.production.map \
   -E1 -ver=XC8 -ASTACK=060h-07ffh -pstack=STACK \
   -ACODE=02000h-02005h,02008h-02015h,02018h-07FFFh \
   -ACONST=02000h-02005h,02008h-02015h,02018h-07FFFh \
@@ -24,7 +24,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  /tmp/xcXYFbco5.obj dist/default/production/Plantilla_5to.X.production.obj 
+  /tmp/xcXCGBTtX.obj dist/default/production/Plantilla_5to.X.production.obj 
 
 Object code version is 3.11
 
@@ -36,7 +36,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXYFbco5.obj
+/tmp/xcXCGBTtX.obj
                 end_init                           2016     2016        4     1004       0
                 reset_vec                          2000     2000        4     1000       0
                 idloc                            200000   200000        8   200000       0

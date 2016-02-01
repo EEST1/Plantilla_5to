@@ -4288,425 +4288,425 @@ Version 3.2 HI-TECH Software Intermediate Code
 "22
 [v _led_tout `ui ~T0 @X0 1 e ]
 [; ;lemos.h: 22: unsigned int led_tout;
-"8 lemos.c
+"12 lemos.c
 [v _leds `(v ~T0 @X0 1 ef1`ui ]
 {
-[; ;lemos.c: 8: void leds(unsigned int velocidad){
+[; ;lemos.c: 12: void leds(unsigned int velocidad){
 [e :U _leds ]
 [v _velocidad `ui ~T0 @X0 1 r1 ]
 [f ]
-"9
+"13
 [v F4460 `uc ~T0 @X0 1 s i ]
 [i F4460
 -> -> 1 `i `uc
 ]
-[; ;lemos.c: 9: static unsigned char i=1;
-[; ;lemos.c: 12: switch(i){
-"12
+[; ;lemos.c: 13: static unsigned char i=1;
+[; ;lemos.c: 16: switch(i){
+"16
 [e $U 559  ]
 {
-[; ;lemos.c: 13: case 1:if(!led_tout){
-"13
+[; ;lemos.c: 17: case 1:if(!led_tout){
+"17
 [e :U 560 ]
 [e $ ! ! != _led_tout -> -> 0 `i `ui 561  ]
 {
-[; ;lemos.c: 14: LATDbits.LD2=~LATDbits.LD2;
-"14
+[; ;lemos.c: 18: LATDbits.LD2=~LATDbits.LD2;
+"18
 [e = . . _LATDbits 3 1 -> ~ -> . . _LATDbits 3 1 `i `uc ]
-[; ;lemos.c: 15: led_tout = velocidad;
-"15
+[; ;lemos.c: 19: led_tout = velocidad;
+"19
 [e = _led_tout _velocidad ]
-[; ;lemos.c: 16: i++;
-"16
+[; ;lemos.c: 20: i++;
+"20
 [e ++ F4460 -> -> 1 `i `uc ]
-"17
+"21
 }
 [e :U 561 ]
-[; ;lemos.c: 17: }
-[; ;lemos.c: 18: break;
-"18
+[; ;lemos.c: 21: }
+[; ;lemos.c: 22: break;
+"22
 [e $U 558  ]
-[; ;lemos.c: 19: case 2:if(!led_tout){
-"19
+[; ;lemos.c: 23: case 2:if(!led_tout){
+"23
 [e :U 562 ]
 [e $ ! ! != _led_tout -> -> 0 `i `ui 563  ]
 {
-[; ;lemos.c: 20: LATDbits.LD3=~LATDbits.LD3;
-"20
+[; ;lemos.c: 24: LATDbits.LD3=~LATDbits.LD3;
+"24
 [e = . . _LATDbits 4 1 -> ~ -> . . _LATDbits 4 1 `i `uc ]
-[; ;lemos.c: 21: led_tout = velocidad;
-"21
+[; ;lemos.c: 25: led_tout = velocidad;
+"25
 [e = _led_tout _velocidad ]
-[; ;lemos.c: 22: i++;
-"22
+[; ;lemos.c: 26: i++;
+"26
 [e ++ F4460 -> -> 1 `i `uc ]
-"23
+"27
 }
 [e :U 563 ]
-[; ;lemos.c: 23: }
-[; ;lemos.c: 24: break;
-"24
+[; ;lemos.c: 27: }
+[; ;lemos.c: 28: break;
+"28
 [e $U 558  ]
-[; ;lemos.c: 25: case 3:if(!led_tout){
-"25
+[; ;lemos.c: 29: case 3:if(!led_tout){
+"29
 [e :U 564 ]
 [e $ ! ! != _led_tout -> -> 0 `i `ui 565  ]
 {
-[; ;lemos.c: 26: LATCbits.LC6=~LATCbits.LC6;
-"26
+[; ;lemos.c: 30: LATCbits.LC6=~LATCbits.LC6;
+"30
 [e = . . _LATCbits 7 1 -> ~ -> . . _LATCbits 7 1 `i `uc ]
-[; ;lemos.c: 27: led_tout = velocidad;
-"27
+[; ;lemos.c: 31: led_tout = velocidad;
+"31
 [e = _led_tout _velocidad ]
-[; ;lemos.c: 28: i++;
-"28
+[; ;lemos.c: 32: i++;
+"32
 [e ++ F4460 -> -> 1 `i `uc ]
-"29
+"33
 }
 [e :U 565 ]
-[; ;lemos.c: 29: }
-[; ;lemos.c: 30: break;
-"30
+[; ;lemos.c: 33: }
+[; ;lemos.c: 34: break;
+"34
 [e $U 558  ]
-[; ;lemos.c: 31: case 4:if(!led_tout){
-"31
+[; ;lemos.c: 35: case 4:if(!led_tout){
+"35
 [e :U 566 ]
 [e $ ! ! != _led_tout -> -> 0 `i `ui 567  ]
 {
-[; ;lemos.c: 32: LATCbits.LC7=~LATCbits.LC7;
-"32
+[; ;lemos.c: 36: LATCbits.LC7=~LATCbits.LC7;
+"36
 [e = . . _LATCbits 8 1 -> ~ -> . . _LATCbits 8 1 `i `uc ]
-[; ;lemos.c: 33: led_tout = velocidad;
-"33
+[; ;lemos.c: 37: led_tout = velocidad;
+"37
 [e = _led_tout _velocidad ]
-[; ;lemos.c: 34: i=1;
-"34
+[; ;lemos.c: 38: i=1;
+"38
 [e = F4460 -> -> 1 `i `uc ]
-"35
+"39
 }
 [e :U 567 ]
-[; ;lemos.c: 35: }
-[; ;lemos.c: 36: break;
-"36
+[; ;lemos.c: 39: }
+[; ;lemos.c: 40: break;
+"40
 [e $U 558  ]
-[; ;lemos.c: 37: default : {
-"37
+[; ;lemos.c: 41: default : {
+"41
 [e :U 568 ]
 {
-[; ;lemos.c: 38: led_tout = 1000;
-"38
+[; ;lemos.c: 42: led_tout = 1000;
+"42
 [e = _led_tout -> -> 1000 `i `ui ]
-[; ;lemos.c: 39: i=1;
-"39
+[; ;lemos.c: 43: i=1;
+"43
 [e = F4460 -> -> 1 `i `uc ]
-"40
+"44
 }
-"41
+"45
 }
-[; ;lemos.c: 40: }
-[; ;lemos.c: 41: }
+[; ;lemos.c: 44: }
+[; ;lemos.c: 45: }
 [e $U 558  ]
-"12
+"16
 [e :U 559 ]
 [e [\ F4460 , $ -> -> 1 `i `uc 560
  , $ -> -> 2 `i `uc 562
  , $ -> -> 3 `i `uc 564
  , $ -> -> 4 `i `uc 566
  568 ]
-"41
+"45
 [e :U 558 ]
-[; ;lemos.c: 42: }
-"42
+[; ;lemos.c: 46: }
+"46
 [e :UE 557 ]
 }
-"43
+"47
 [v _Send_Disp `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[; ;lemos.c: 43: void Send_Disp(unsigned char NroDisp,unsigned char Dato){
+[; ;lemos.c: 47: void Send_Disp(unsigned char NroDisp,unsigned char Dato){
 [e :U _Send_Disp ]
 [v _NroDisp `uc ~T0 @X0 1 r1 ]
 [v _Dato `uc ~T0 @X0 1 r2 ]
 [f ]
-[; ;lemos.c: 45: LATA = 0;
-"45
-[e = _LATA -> -> 0 `i `uc ]
-[; ;lemos.c: 47: LATAbits.LA4 = 0;
-"47
-[e = . . _LATAbits 5 1 -> -> 0 `i `uc ]
-[; ;lemos.c: 48: LATAbits.LA5 = 0;
-"48
-[e = . . _LATAbits 6 1 -> -> 0 `i `uc ]
-[; ;lemos.c: 49: LATEbits.LATE0 = 0;
+[; ;lemos.c: 49: LATA = 0;
 "49
-[e = . . _LATEbits 0 0 -> -> 0 `i `uc ]
-[; ;lemos.c: 50: LATEbits.LATE1 = 0;
-"50
-[e = . . _LATEbits 0 1 -> -> 0 `i `uc ]
-[; ;lemos.c: 52: switch(NroDisp){
+[e = _LATA -> -> 0 `i `uc ]
+[; ;lemos.c: 51: LATAbits.LA4 = 0;
+"51
+[e = . . _LATAbits 5 1 -> -> 0 `i `uc ]
+[; ;lemos.c: 52: LATAbits.LA5 = 0;
 "52
+[e = . . _LATAbits 6 1 -> -> 0 `i `uc ]
+[; ;lemos.c: 53: LATEbits.LATE0 = 0;
+"53
+[e = . . _LATEbits 0 0 -> -> 0 `i `uc ]
+[; ;lemos.c: 54: LATEbits.LATE1 = 0;
+"54
+[e = . . _LATEbits 0 1 -> -> 0 `i `uc ]
+[; ;lemos.c: 56: switch(NroDisp){
+"56
 [e $U 571  ]
 {
-[; ;lemos.c: 53: case 1:{
-"53
+[; ;lemos.c: 57: case 1:{
+"57
 [e :U 572 ]
 {
-[; ;lemos.c: 54: LATAbits.LA4 = 1;
-"54
+[; ;lemos.c: 58: LATAbits.LA4 = 1;
+"58
 [e = . . _LATAbits 5 1 -> -> 1 `i `uc ]
-"55
+"59
 }
-[; ;lemos.c: 55: }break;
+[; ;lemos.c: 59: }break;
 [e $U 570  ]
-[; ;lemos.c: 56: case 2: {
-"56
+[; ;lemos.c: 60: case 2: {
+"60
 [e :U 573 ]
 {
-[; ;lemos.c: 57: LATAbits.LA5 = 1;
-"57
+[; ;lemos.c: 61: LATAbits.LA5 = 1;
+"61
 [e = . . _LATAbits 6 1 -> -> 1 `i `uc ]
-"58
+"62
 }
-[; ;lemos.c: 58: }break;
+[; ;lemos.c: 62: }break;
 [e $U 570  ]
-[; ;lemos.c: 59: case 3: {
-"59
+[; ;lemos.c: 63: case 3: {
+"63
 [e :U 574 ]
 {
-[; ;lemos.c: 60: LATEbits.LATE0 = 1;
-"60
+[; ;lemos.c: 64: LATEbits.LATE0 = 1;
+"64
 [e = . . _LATEbits 0 0 -> -> 1 `i `uc ]
-"61
+"65
 }
-[; ;lemos.c: 61: }break;
+[; ;lemos.c: 65: }break;
 [e $U 570  ]
-[; ;lemos.c: 62: case 4: {
-"62
+[; ;lemos.c: 66: case 4: {
+"66
 [e :U 575 ]
 {
-[; ;lemos.c: 63: LATEbits.LATE1 = 1;
-"63
-[e = . . _LATEbits 0 1 -> -> 1 `i `uc ]
-"64
-}
-[; ;lemos.c: 64: }break;
-[e $U 570  ]
-[; ;lemos.c: 65: default :{
-"65
-[e :U 576 ]
-{
-[; ;lemos.c: 66: LATAbits.LA4 = 1;
-"66
-[e = . . _LATAbits 5 1 -> -> 1 `i `uc ]
+[; ;lemos.c: 67: LATEbits.LATE1 = 1;
 "67
-}
-[; ;lemos.c: 67: }break;
-[e $U 570  ]
+[e = . . _LATEbits 0 1 -> -> 1 `i `uc ]
 "68
 }
-[; ;lemos.c: 68: }
+[; ;lemos.c: 68: }break;
 [e $U 570  ]
-"52
+[; ;lemos.c: 69: default :{
+"69
+[e :U 576 ]
+{
+[; ;lemos.c: 70: LATAbits.LA4 = 1;
+"70
+[e = . . _LATAbits 5 1 -> -> 1 `i `uc ]
+"71
+}
+[; ;lemos.c: 71: }break;
+[e $U 570  ]
+"72
+}
+[; ;lemos.c: 72: }
+[e $U 570  ]
+"56
 [e :U 571 ]
 [e [\ _NroDisp , $ -> -> 1 `i `uc 572
  , $ -> -> 2 `i `uc 573
  , $ -> -> 3 `i `uc 574
  , $ -> -> 4 `i `uc 575
  576 ]
-"68
-[e :U 570 ]
-[; ;lemos.c: 69: Dato = Dato & 0x0F;
-"69
-[e = _Dato -> & -> _Dato `i -> 15 `i `uc ]
-[; ;lemos.c: 70: LATA = LATA & 0xF0;
-"70
-[e = _LATA -> & -> _LATA `i -> 240 `i `uc ]
-[; ;lemos.c: 71: LATA = LATA | Dato;
-"71
-[e = _LATA -> | -> _LATA `i -> _Dato `i `uc ]
-[; ;lemos.c: 72: }
 "72
+[e :U 570 ]
+[; ;lemos.c: 73: Dato = Dato & 0x0F;
+"73
+[e = _Dato -> & -> _Dato `i -> 15 `i `uc ]
+[; ;lemos.c: 74: LATA = LATA & 0xF0;
+"74
+[e = _LATA -> & -> _LATA `i -> 240 `i `uc ]
+[; ;lemos.c: 75: LATA = LATA | Dato;
+"75
+[e = _LATA -> | -> _LATA `i -> _Dato `i `uc ]
+[; ;lemos.c: 76: }
+"76
 [e :UE 569 ]
 }
-"74
+"78
 [v _Send_4Disp `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
 {
-[; ;lemos.c: 74: void Send_4Disp(unsigned char Umil,unsigned char Cent,unsigned char Dec,unsigned char Uni){
+[; ;lemos.c: 78: void Send_4Disp(unsigned char Umil,unsigned char Cent,unsigned char Dec,unsigned char Uni){
 [e :U _Send_4Disp ]
 [v _Umil `uc ~T0 @X0 1 r1 ]
 [v _Cent `uc ~T0 @X0 1 r2 ]
 [v _Dec `uc ~T0 @X0 1 r3 ]
 [v _Uni `uc ~T0 @X0 1 r4 ]
 [f ]
-"76
+"80
 [v F4467 `uc ~T0 @X0 1 s Nro_Disp ]
 [i F4467
 -> -> 1 `i `uc
 ]
-[; ;lemos.c: 76: static unsigned char Nro_Disp=1;
-[; ;lemos.c: 78: switch(Nro_Disp){
-"78
+[; ;lemos.c: 80: static unsigned char Nro_Disp=1;
+[; ;lemos.c: 82: switch(Nro_Disp){
+"82
 [e $U 579  ]
 {
-[; ;lemos.c: 79: case 1:{
-"79
+[; ;lemos.c: 83: case 1:{
+"83
 [e :U 580 ]
 {
-[; ;lemos.c: 80: if(!mux_tout){
-"80
+[; ;lemos.c: 84: if(!mux_tout){
+"84
 [e $ ! ! != -> _mux_tout `i -> -> -> 0 `i `uc `i 581  ]
 {
-[; ;lemos.c: 81: Send_Disp(1,Umil);
-"81
+[; ;lemos.c: 85: Send_Disp(1,Umil);
+"85
 [e ( _Send_Disp (2 , -> -> 1 `i `uc _Umil ]
-[; ;lemos.c: 82: mux_tout = 4;;
-"82
+[; ;lemos.c: 86: mux_tout = 4;;
+"86
 [e = _mux_tout -> -> 4 `i `uc ]
-[; ;lemos.c: 83: Nro_Disp = 2;
-"83
+[; ;lemos.c: 87: Nro_Disp = 2;
+"87
 [e = F4467 -> -> 2 `i `uc ]
-"84
+"88
 }
 [e :U 581 ]
-"85
+"89
 }
-[; ;lemos.c: 84: }
-[; ;lemos.c: 85: }
-[; ;lemos.c: 86: break;
-"86
+[; ;lemos.c: 88: }
+[; ;lemos.c: 89: }
+[; ;lemos.c: 90: break;
+"90
 [e $U 578  ]
-[; ;lemos.c: 87: case 2:{
-"87
+[; ;lemos.c: 91: case 2:{
+"91
 [e :U 582 ]
 {
-[; ;lemos.c: 88: if(!mux_tout){
-"88
+[; ;lemos.c: 92: if(!mux_tout){
+"92
 [e $ ! ! != -> _mux_tout `i -> -> -> 0 `i `uc `i 583  ]
 {
-[; ;lemos.c: 89: Send_Disp(2,Cent);
-"89
+[; ;lemos.c: 93: Send_Disp(2,Cent);
+"93
 [e ( _Send_Disp (2 , -> -> 2 `i `uc _Cent ]
-[; ;lemos.c: 90: mux_tout = 4;;
-"90
+[; ;lemos.c: 94: mux_tout = 4;;
+"94
 [e = _mux_tout -> -> 4 `i `uc ]
-[; ;lemos.c: 91: Nro_Disp = 3;
-"91
+[; ;lemos.c: 95: Nro_Disp = 3;
+"95
 [e = F4467 -> -> 3 `i `uc ]
-"92
+"96
 }
 [e :U 583 ]
-"93
+"97
 }
-[; ;lemos.c: 92: }
-[; ;lemos.c: 93: }
-[; ;lemos.c: 94: break;
-"94
+[; ;lemos.c: 96: }
+[; ;lemos.c: 97: }
+[; ;lemos.c: 98: break;
+"98
 [e $U 578  ]
-[; ;lemos.c: 95: case 3:{
-"95
+[; ;lemos.c: 99: case 3:{
+"99
 [e :U 584 ]
 {
-[; ;lemos.c: 96: if(!mux_tout){
-"96
+[; ;lemos.c: 100: if(!mux_tout){
+"100
 [e $ ! ! != -> _mux_tout `i -> -> -> 0 `i `uc `i 585  ]
 {
-[; ;lemos.c: 97: Send_Disp(3,Dec);
-"97
+[; ;lemos.c: 101: Send_Disp(3,Dec);
+"101
 [e ( _Send_Disp (2 , -> -> 3 `i `uc _Dec ]
-[; ;lemos.c: 98: mux_tout = 4;;
-"98
+[; ;lemos.c: 102: mux_tout = 4;;
+"102
 [e = _mux_tout -> -> 4 `i `uc ]
-[; ;lemos.c: 99: Nro_Disp = 4;
-"99
+[; ;lemos.c: 103: Nro_Disp = 4;
+"103
 [e = F4467 -> -> 4 `i `uc ]
-"100
+"104
 }
 [e :U 585 ]
-"101
+"105
 }
-[; ;lemos.c: 100: }
-[; ;lemos.c: 101: }
-[; ;lemos.c: 102: break;
-"102
+[; ;lemos.c: 104: }
+[; ;lemos.c: 105: }
+[; ;lemos.c: 106: break;
+"106
 [e $U 578  ]
-[; ;lemos.c: 103: case 4:{
-"103
+[; ;lemos.c: 107: case 4:{
+"107
 [e :U 586 ]
 {
-[; ;lemos.c: 104: if(!mux_tout){
-"104
+[; ;lemos.c: 108: if(!mux_tout){
+"108
 [e $ ! ! != -> _mux_tout `i -> -> -> 0 `i `uc `i 587  ]
 {
-[; ;lemos.c: 105: Send_Disp(4,Uni);
-"105
+[; ;lemos.c: 109: Send_Disp(4,Uni);
+"109
 [e ( _Send_Disp (2 , -> -> 4 `i `uc _Uni ]
-[; ;lemos.c: 106: mux_tout = 4;;
-"106
+[; ;lemos.c: 110: mux_tout = 4;;
+"110
 [e = _mux_tout -> -> 4 `i `uc ]
-[; ;lemos.c: 107: Nro_Disp = 1;
-"107
+[; ;lemos.c: 111: Nro_Disp = 1;
+"111
 [e = F4467 -> -> 1 `i `uc ]
-"108
+"112
 }
 [e :U 587 ]
-"109
+"113
 }
-[; ;lemos.c: 108: }
-[; ;lemos.c: 109: }
-[; ;lemos.c: 110: break;
-"110
+[; ;lemos.c: 112: }
+[; ;lemos.c: 113: }
+[; ;lemos.c: 114: break;
+"114
 [e $U 578  ]
-[; ;lemos.c: 111: default :{
-"111
+[; ;lemos.c: 115: default :{
+"115
 [e :U 588 ]
 {
-[; ;lemos.c: 112: mux_tout = 4;;
-"112
+[; ;lemos.c: 116: mux_tout = 4;;
+"116
 [e = _mux_tout -> -> 4 `i `uc ]
-[; ;lemos.c: 113: Nro_Disp = 1;
-"113
+[; ;lemos.c: 117: Nro_Disp = 1;
+"117
 [e = F4467 -> -> 1 `i `uc ]
-"114
+"118
 }
-"115
+"119
 }
-[; ;lemos.c: 114: }
-[; ;lemos.c: 115: }
+[; ;lemos.c: 118: }
+[; ;lemos.c: 119: }
 [e $U 578  ]
-"78
+"82
 [e :U 579 ]
 [e [\ F4467 , $ -> -> 1 `i `uc 580
  , $ -> -> 2 `i `uc 582
  , $ -> -> 3 `i `uc 584
  , $ -> -> 4 `i `uc 586
  588 ]
-"115
+"119
 [e :U 578 ]
-[; ;lemos.c: 116: }
-"116
+[; ;lemos.c: 120: }
+"120
 [e :UE 577 ]
 }
-"117
+"121
 [v _tic_timer0 `(v ~T0 @X0 1 ef ]
 {
-[; ;lemos.c: 117: void tic_timer0(void){
+[; ;lemos.c: 121: void tic_timer0(void){
 [e :U _tic_timer0 ]
 [f ]
-[; ;lemos.c: 118: if(mux_tout)mux_tout--;
-"118
+[; ;lemos.c: 122: if(mux_tout)mux_tout--;
+"122
 [e $ ! != -> _mux_tout `i -> -> -> 0 `i `uc `i 590  ]
 [e -- _mux_tout -> -> 1 `i `uc ]
 [e :U 590 ]
-[; ;lemos.c: 119: if(bot_tout)bot_tout--;
-"119
+[; ;lemos.c: 123: if(bot_tout)bot_tout--;
+"123
 [e $ ! != -> _bot_tout `i -> -> -> 0 `i `uc `i 591  ]
 [e -- _bot_tout -> -> 1 `i `uc ]
 [e :U 591 ]
-[; ;lemos.c: 120: if(led_tout)led_tout--;
-"120
+[; ;lemos.c: 124: if(led_tout)led_tout--;
+"124
 [e $ ! != _led_tout -> -> 0 `i `ui 592  ]
 [e -- _led_tout -> -> 1 `i `ui ]
 [e :U 592 ]
-[; ;lemos.c: 121: }
-"121
+[; ;lemos.c: 125: }
+"125
 [e :UE 589 ]
 }

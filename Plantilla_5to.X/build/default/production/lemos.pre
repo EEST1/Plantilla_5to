@@ -5407,7 +5407,7 @@ void tic_timer0(void);
 unsigned char mux_tout,bot_tout;
 unsigned int led_tout;
 
-# 8 "lemos.c"
+# 12 "lemos.c"
 void leds(unsigned int velocidad){
 static unsigned char i=1;
 

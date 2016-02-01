@@ -2,7 +2,11 @@
 #include "Ap_ini.h"
 #include "lemos.h"
 
-//algunas funciones para tomar de ejemplo
+/*Algunas funciones para tomar de ejemplo
+ * Es necesario configurar la interrupcion del TMR0 para que se llame 
+ * a la funcion tic_timer0() cada 1ms
+ */ 
+
 
 
 void leds(unsigned int velocidad){
