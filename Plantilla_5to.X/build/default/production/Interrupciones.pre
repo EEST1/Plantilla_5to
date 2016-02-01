@@ -1,5 +1,5 @@
 
-# 1 "main.c"
+# 1 "Interrupciones.c"
 
 # 26 "/opt/microchip/xc8/v1.35/include/htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -5393,58 +5393,21 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-
-# 21 "confbits.h"
-#pragma config PLLDIV = 5
-#pragma config CPUDIV = OSC1_PLL2
-#pragma config USBDIV = 2
-#pragma config FOSC = HSPLL_HS
-#pragma config FCMEN = OFF
-#pragma config IESO = OFF
-#pragma config PWRT = OFF
-#pragma config BOR = ON
-#pragma config BORV = 3
-#pragma config VREGEN = ON
-#pragma config WDT = OFF
-#pragma config WDTPS = 32768
-#pragma config MCLRE = ON
-#pragma config LPT1OSC = OFF
-#pragma config PBADEN = OFF
+# 15 "lemos.h"
+void Send_Disp(unsigned char NroDisp,unsigned char Dato);
+void Send_4Disp(unsigned char Umil,unsigned char Cent,unsigned char Dec,unsigned char Uni);
+void leds(unsigned int velocidad);
+void tic_timer0(void);
 
 
-# 43
-#pragma config STVREN = ON
-#pragma config LVP = OFF
+unsigned char mux_tout,bot_tout;
+unsigned int led_tout;
 
-#pragma config XINST = OFF
-#pragma config CP0 = OFF
-#pragma config CP1 = OFF
+# 3 "Interrupciones.c"
+void __interrupt myISR(void){
 
-
-#pragma config CPB = OFF
-
-#pragma config WRT0 = OFF
-#pragma config WRT1 = OFF
-
-
-#pragma config WRTB = OFF
-#pragma config WRTC = OFF
-
-#pragma config EBTR0 = OFF
-#pragma config EBTR1 = OFF
-
-
-#pragma config EBTRB = OFF
-
-# 13 "main.c"
-void main(void) {
-
-unsigned char ejemplo=0;
-
-while(1){
-
-
-
+# 8
+if(TMR0IF){
+tic_timer0();
 }
 }
-

@@ -23,15 +23,17 @@
 [v ___flmul __flmul `(d  1 e 3 0 ]
 "15 /opt/microchip/xc8/v1.35/sources/common/Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
+"3 /home/esteban/MPLABXProjects/Plantilla_5to/Plantilla_5to.X/Interrupciones.c
+[v _myISR myISR `II(v  1 e 0 0 ]
 "47 /home/esteban/MPLABXProjects/Plantilla_5to/Plantilla_5to.X/lemos.c
 [v _Send_Disp Send_Disp `(v  1 e 0 0 ]
+"121
+[v _tic_timer0 tic_timer0 `(v  1 e 0 0 ]
 "13 /home/esteban/MPLABXProjects/Plantilla_5to/Plantilla_5to.X/main.c
 [v _main main `(v  1 e 0 0 ]
-"24
-[v _myISR myISR `II(v  1 e 0 0 ]
 "3360 /opt/microchip/xc8/v1.35/include/pic18f4550.h
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
-[s S280 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S278 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -40,39 +42,39 @@
 `uc 1 LATA6 1 0 :1:6 
 ]
 "3411
-[s S288 . 1 `uc 1 LA0 1 0 :1:0 
+[s S286 . 1 `uc 1 LA0 1 0 :1:0 
 ]
-[s S290 . 1 `uc 1 . 1 0 :1:0 
+[s S288 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 LA1 1 0 :1:1 
 ]
-[s S293 . 1 `uc 1 . 1 0 :2:0 
+[s S291 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LA2 1 0 :1:2 
 ]
-[s S296 . 1 `uc 1 . 1 0 :3:0 
+[s S294 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 LA3 1 0 :1:3 
 ]
-[s S299 . 1 `uc 1 . 1 0 :4:0 
+[s S297 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LA4 1 0 :1:4 
 ]
-[s S302 . 1 `uc 1 . 1 0 :5:0 
+[s S300 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 LA5 1 0 :1:5 
 ]
-[s S305 . 1 `uc 1 . 1 0 :6:0 
+[s S303 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 LA6 1 0 :1:6 
 ]
-[s S308 . 1 `uc 1 . 1 0 :7:0 
+[s S306 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 LA7 1 0 :1:7 
 ]
-[s S311 . 1 `uc 1 . 1 0 :7:0 
+[s S309 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 LATA7 1 0 :1:7 
 ]
-[u S314 . 1 `S280 1 . 1 0 `S288 1 . 1 0 `S290 1 . 1 0 `S293 1 . 1 0 `S296 1 . 1 0 `S299 1 . 1 0 `S302 1 . 1 0 `S305 1 . 1 0 `S308 1 . 1 0 `S311 1 . 1 0 ]
-[v _LATAbits LATAbits `VES314  1 e 1 @3977 ]
+[u S312 . 1 `S278 1 . 1 0 `S286 1 . 1 0 `S288 1 . 1 0 `S291 1 . 1 0 `S294 1 . 1 0 `S297 1 . 1 0 `S300 1 . 1 0 `S303 1 . 1 0 `S306 1 . 1 0 `S309 1 . 1 0 ]
+[v _LATAbits LATAbits `VES312  1 e 1 @3977 ]
 "3495
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
 "3627
 [v _LATC LATC `VEuc  1 e 1 @3979 ]
-[s S451 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S449 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
@@ -80,34 +82,34 @@
 `uc 1 LATC7 1 0 :1:7 
 ]
 "3673
-[s S458 . 1 `uc 1 LC0 1 0 :1:0 
+[s S456 . 1 `uc 1 LC0 1 0 :1:0 
 ]
-[s S460 . 1 `uc 1 . 1 0 :1:0 
+[s S458 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 ]
-[s S463 . 1 `uc 1 . 1 0 :2:0 
+[s S461 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LC2 1 0 :1:2 
 ]
-[s S466 . 1 `uc 1 . 1 0 :3:0 
+[s S464 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 LC3 1 0 :1:3 
 ]
-[s S469 . 1 `uc 1 . 1 0 :4:0 
+[s S467 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LC4 1 0 :1:4 
 ]
-[s S472 . 1 `uc 1 . 1 0 :5:0 
+[s S470 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 LC5 1 0 :1:5 
 ]
-[s S475 . 1 `uc 1 . 1 0 :6:0 
+[s S473 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 LC6 1 0 :1:6 
 ]
-[s S478 . 1 `uc 1 . 1 0 :7:0 
+[s S476 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 LC7 1 0 :1:7 
 ]
-[u S481 . 1 `S451 1 . 1 0 `S458 1 . 1 0 `S460 1 . 1 0 `S463 1 . 1 0 `S466 1 . 1 0 `S469 1 . 1 0 `S472 1 . 1 0 `S475 1 . 1 0 `S478 1 . 1 0 ]
-[v _LATCbits LATCbits `VES481  1 e 1 @3979 ]
+[u S479 . 1 `S449 1 . 1 0 `S456 1 . 1 0 `S458 1 . 1 0 `S461 1 . 1 0 `S464 1 . 1 0 `S467 1 . 1 0 `S470 1 . 1 0 `S473 1 . 1 0 `S476 1 . 1 0 ]
+[v _LATCbits LATCbits `VES479  1 e 1 @3979 ]
 "3742
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
-[s S376 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S374 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -117,68 +119,68 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "3790
-[s S385 . 1 `uc 1 LD0 1 0 :1:0 
+[s S383 . 1 `uc 1 LD0 1 0 :1:0 
 ]
-[s S387 . 1 `uc 1 . 1 0 :1:0 
+[s S385 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 ]
-[s S390 . 1 `uc 1 . 1 0 :2:0 
+[s S388 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LD2 1 0 :1:2 
 ]
-[s S393 . 1 `uc 1 . 1 0 :3:0 
+[s S391 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 LD3 1 0 :1:3 
 ]
-[s S396 . 1 `uc 1 . 1 0 :4:0 
+[s S394 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LD4 1 0 :1:4 
 ]
-[s S399 . 1 `uc 1 . 1 0 :5:0 
+[s S397 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 LD5 1 0 :1:5 
 ]
-[s S402 . 1 `uc 1 . 1 0 :6:0 
+[s S400 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 LD6 1 0 :1:6 
 ]
-[s S405 . 1 `uc 1 . 1 0 :7:0 
+[s S403 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S408 . 1 `S376 1 . 1 0 `S385 1 . 1 0 `S387 1 . 1 0 `S390 1 . 1 0 `S393 1 . 1 0 `S396 1 . 1 0 `S399 1 . 1 0 `S402 1 . 1 0 `S405 1 . 1 0 ]
-[v _LATDbits LATDbits `VES408  1 e 1 @3980 ]
+[u S406 . 1 `S374 1 . 1 0 `S383 1 . 1 0 `S385 1 . 1 0 `S388 1 . 1 0 `S391 1 . 1 0 `S394 1 . 1 0 `S397 1 . 1 0 `S400 1 . 1 0 `S403 1 . 1 0 ]
+[v _LATDbits LATDbits `VES406  1 e 1 @3980 ]
 "3874
 [v _LATE LATE `VEuc  1 e 1 @3981 ]
-[s S215 . 1 `uc 1 LATE0 1 0 :1:0 
+[s S213 . 1 `uc 1 LATE0 1 0 :1:0 
 `uc 1 LATE1 1 0 :1:1 
 `uc 1 LATE2 1 0 :1:2 
 ]
 "3917
-[s S219 . 1 `uc 1 LE0 1 0 :1:0 
+[s S217 . 1 `uc 1 LE0 1 0 :1:0 
 ]
-[s S221 . 1 `uc 1 . 1 0 :1:0 
+[s S219 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 LE1 1 0 :1:1 
 ]
-[s S224 . 1 `uc 1 . 1 0 :2:0 
+[s S222 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LE2 1 0 :1:2 
 ]
-[s S227 . 1 `uc 1 . 1 0 :3:0 
+[s S225 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 LE3 1 0 :1:3 
 ]
-[s S230 . 1 `uc 1 . 1 0 :4:0 
+[s S228 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LE4 1 0 :1:4 
 ]
-[s S233 . 1 `uc 1 . 1 0 :5:0 
+[s S231 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 LE5 1 0 :1:5 
 ]
-[s S236 . 1 `uc 1 . 1 0 :6:0 
+[s S234 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 LE6 1 0 :1:6 
 ]
-[s S239 . 1 `uc 1 . 1 0 :7:0 
+[s S237 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 LE7 1 0 :1:7 
 ]
-[u S242 . 1 `S215 1 . 1 0 `S219 1 . 1 0 `S221 1 . 1 0 `S224 1 . 1 0 `S227 1 . 1 0 `S230 1 . 1 0 `S233 1 . 1 0 `S236 1 . 1 0 `S239 1 . 1 0 ]
-[v _LATEbits LATEbits `VES242  1 e 1 @3981 ]
+[u S240 . 1 `S213 1 . 1 0 `S217 1 . 1 0 `S219 1 . 1 0 `S222 1 . 1 0 `S225 1 . 1 0 `S228 1 . 1 0 `S231 1 . 1 0 `S234 1 . 1 0 `S237 1 . 1 0 ]
+[v _LATEbits LATEbits `VES240  1 e 1 @3981 ]
 "3976
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "4173
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-[s S31 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S29 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
@@ -186,18 +188,18 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "4426
-[s S38 . 1 `uc 1 RC0 1 0 :1:0 
+[s S36 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[s S45 . 1 `uc 1 . 1 0 :3:0 
+[s S43 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 TRISC3 1 0 :1:3 
 ]
-[u S48 . 1 `S31 1 . 1 0 `S38 1 . 1 0 `S45 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES48  1 e 1 @3988 ]
+[u S46 . 1 `S29 1 . 1 0 `S36 1 . 1 0 `S43 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES46  1 e 1 @3988 ]
 "4565
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "4786
@@ -206,7 +208,7 @@
 [v _CMCON CMCON `VEuc  1 e 1 @4020 ]
 "7173
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-[s S75 . 1 `uc 1 T0PS 1 0 :3:0 
+[s S73 . 1 `uc 1 T0PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -214,17 +216,17 @@
 `uc 1 TMR0ON 1 0 :1:7 
 ]
 "8691
-[s S82 . 1 `uc 1 T0PS0 1 0 :1:0 
+[s S80 . 1 `uc 1 T0PS0 1 0 :1:0 
 `uc 1 T0PS1 1 0 :1:1 
 `uc 1 T0PS2 1 0 :1:2 
 ]
-[u S86 . 1 `S75 1 . 1 0 `S82 1 . 1 0 ]
-[v _T0CONbits T0CONbits `VES86  1 e 1 @4053 ]
+[u S84 . 1 `S73 1 . 1 0 `S80 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES84  1 e 1 @4053 ]
 "8746
 [v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
 "8752
 [v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
-[s S103 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S101 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -234,7 +236,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "9211
-[s S112 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S110 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -243,7 +245,7 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S121 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S119 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -252,7 +254,7 @@
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[s S130 . 1 `uc 1 . 1 0 :1:0 
+[s S128 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -261,12 +263,14 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S139 . 1 `uc 1 . 1 0 :6:0 
+[s S137 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S143 . 1 `S103 1 . 1 0 `S112 1 . 1 0 `S121 1 . 1 0 `S130 1 . 1 0 `S139 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES143  1 e 1 @4082 ]
+[u S141 . 1 `S101 1 . 1 0 `S110 1 . 1 0 `S119 1 . 1 0 `S128 1 . 1 0 `S137 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES141  1 e 1 @4082 ]
+"10801
+[v _TMR0IF TMR0IF `VEb  1 e 0 @32658 ]
 "21 /home/esteban/MPLABXProjects/Plantilla_5to/Plantilla_5to.X/lemos.h
 [v _mux_tout mux_tout `uc  1 e 1 0 ]
 [v _bot_tout bot_tout `uc  1 e 1 0 ]
@@ -284,8 +288,13 @@
 [v main@ejemplo ejemplo `uc  1 a 1 14 ]
 "22
 } 0
-"24
+"3 /home/esteban/MPLABXProjects/Plantilla_5to/Plantilla_5to.X/Interrupciones.c
 [v _myISR myISR `II(v  1 e 0 0 ]
 {
-"30
+"11
+} 0
+"121 /home/esteban/MPLABXProjects/Plantilla_5to/Plantilla_5to.X/lemos.c
+[v _tic_timer0 tic_timer0 `(v  1 e 0 0 ]
+{
+"125
 } 0

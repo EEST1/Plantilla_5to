@@ -5,7 +5,7 @@ Linker command line:
 --edf=/opt/microchip/xc8/v1.35/dat/en_msgs.txt -cs \
   -h+dist/default/production/Plantilla_5to.X.production.sym \
   --cmf=dist/default/production/Plantilla_5to.X.production.cmf -z -Q18F4550 \
-  -o/tmp/xcXWimIUv -Mdist/default/production/Plantilla_5to.X.production.map \
+  -o/tmp/xcX2S1aiS -Mdist/default/production/Plantilla_5to.X.production.map \
   -E1 -ver=XC8 -ASTACK=060h-07ffh -pstack=STACK \
   -ACODE=02000h-02005h,02008h-02015h,02018h-07FFFh \
   -ACONST=02000h-02005h,02008h-02015h,02018h-07FFFh \
@@ -24,7 +24,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  /tmp/xcXCGBTtX.obj dist/default/production/Plantilla_5to.X.production.obj 
+  /tmp/xcXMMaqGw.obj dist/default/production/Plantilla_5to.X.production.obj 
 
 Object code version is 3.11
 
@@ -36,7 +36,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXCGBTtX.obj
+/tmp/xcXMMaqGw.obj
                 end_init                           2016     2016        4     1004       0
                 reset_vec                          2000     2000        4     1000       0
                 idloc                            200000   200000        8   200000       0
@@ -44,13 +44,14 @@ Call graph: (short form)
 dist/default/production/Plantilla_5to.X.production.obj
                 intcode                            2008     2008        E     1004       0
                 temp                                 1C       1C        1        1       1
-                intcode_body                       7F92     7F92       6E     3FC9       0
-                text0                              7F54     7F54        6     3FAA       0
+                text2                              7F38     7F38       1C     3F9C       0
+                intcode_body                       7F8C     7F8C       74     3FC6       0
+                text0                              7F32     7F32        6     3F99       0
                 cstackCOMRAM                          1        1        F        1       1
                 dataCOMRAM                           19       19        3        1       1
                 bssCOMRAM                            10       10        9        1       1
-                cinit                              7F5A     7F5A       38     3FAD       0
-                idataCOMRAM                        7F51     7F51        3     7F51       0
+                cinit                              7F54     7F54       38     3FAA       0
+                idataCOMRAM                        7F2F     7F2F        3     7F2F       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -59,10 +60,11 @@ TOTAL           Name                               Link     Load   Length     Sp
                 end_init                           2016     2016        4         0
                 intcode                            2008     2008        E         0
                 reset_vec                          2000     2000        4         0
-                intcode_body                       7F92     7F92       6E         0
-                text0                              7F54     7F54        6         0
-                cinit                              7F5A     7F5A       38         0
-                idataCOMRAM                        7F51     7F51        3         0
+                text2                              7F38     7F38       1C         0
+                intcode_body                       7F8C     7F8C       74         0
+                text0                              7F32     7F32        6         0
+                cinit                              7F54     7F54       38         0
+                idataCOMRAM                        7F2F     7F2F        3         0
 
         CLASS   CONST          
 
@@ -117,10 +119,11 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackCOMRAM                   000001  00001C  00001D         1       1  COMRAM  
                 reset_vec                      002000  000004  002004      1000       0  CODE    
                 intcode                        002008  000012  00201A      1004       0  CODE    
-                idataCOMRAM                    007F51  000003  007F54      7F51       0  CODE    
-                text0                          007F54  000006  007F5A      3FAA       0  CODE    
-                cinit                          007F5A  000038  007F92      3FAD       0  CODE    
-                intcode_body                   007F92  00006E  008000      3FC9       0  CODE    
+                idataCOMRAM                    007F2F  000003  007F32      7F2F       0  CODE    
+                text0                          007F32  000006  007F38      3F99       0  CODE    
+                text2                          007F38  00001C  007F54      3F9C       0  CODE    
+                cinit                          007F54  000038  007F8C      3FAA       0  CODE    
+                intcode_body                   007F8C  000074  008000      3FC6       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -138,18 +141,18 @@ UNUSED ADDRESS RANGES
         BANK7            000700-0007FF              100
         BIGRAM           00001D-0007FF              7E3
         CODE             002004-002005                2
-                         00201A-007F50             5F37
+                         00201A-007F2E             5F15
         COMRAM           00001D-00005F               43
         CONST            002004-002005                2
-                         00201A-007F50             5F37
+                         00201A-007F2E             5F15
         EEDATA           F00000-F000FF              100
         FARRAM           000000-000000                1
         MEDIUMCONST      002004-002005                2
-                         00201A-007F50             5F37
+                         00201A-007F2E             5F15
         RAM              000060-0007FF              100
         SFR              000F60-000FFF               A0
         SMALLCONST       002004-002005                2
-                         00201A-007F50              100
+                         00201A-007F2E              100
         STACK            000060-0007FF              7A0
 
                                   Symbol Table
@@ -172,6 +175,7 @@ _LATEbits                (abs)        000F8D
 _MEMDIG                  dataCOMRAM   00001A
 _T0CONbits               (abs)        000FD5
 _TMR0H                   (abs)        000FD7
+_TMR0IF                  (abs)        007F92
 _TMR0L                   (abs)        000FD6
 _TRISA                   (abs)        000F92
 _TRISB                   (abs)        000F93
@@ -271,6 +275,7 @@ __Hstruct                struct       000000
 __Htemp                  temp         00001D
 __Htext                  text         000000
 __Htext0                 text0        000000
+__Htext2                 text2        000000
 __LRAM                   (abs)        000001
 __Labs1                  abs1         000000
 __Lbank0                 bank0        000000
@@ -334,6 +339,7 @@ __Lstruct                struct       000000
 __Ltemp                  temp         00001C
 __Ltext                  text         000000
 __Ltext0                 text0        000000
+__Ltext2                 text2        000000
 __S0                     (abs)        30000E
 __S1                     (abs)        00001D
 __S2                     (abs)        000000
@@ -344,32 +350,36 @@ ___rparam_used           (abs)        000001
 ___sp                    stack        000000
 __accesstop              (abs)        000060
 __activetblptr           (abs)        000002
-__end_of__initialization cinit        007F84
-__end_of_main            text0        007F5A
+__end_of__initialization cinit        007F7E
+__end_of_main            text0        007F38
 __end_of_myISR           intcode_body 008000
-__initialization         cinit        007F5A
+__end_of_tic_timer0      text2        007F54
+__initialization         cinit        007F54
 __mediumconst            mediumconst  000000
 __pbssCOMRAM             bssCOMRAM    000010
-__pcinit                 cinit        007F5A
+__pcinit                 cinit        007F54
 __pcstackCOMRAM          cstackCOMRAM 000001
 __pdataCOMRAM            dataCOMRAM   000019
-__pidataCOMRAM           idataCOMRAM  007F51
+__pidataCOMRAM           idataCOMRAM  007F2F
 __pintcode               intcode      002008
-__pintcode_body          intcode_body 007F92
-__ptext0                 text0        007F54
+__pintcode_body          intcode_body 007F8C
+__ptext0                 text0        007F32
+__ptext2                 text2        007F38
 __ramtop                 ramtop       000800
 __size_of_main           (abs)        000000
 __size_of_myISR          (abs)        000000
+__size_of_tic_timer0     (abs)        000000
 __smallconst             smallconst   000000
 _bot_tout                bssCOMRAM    000016
 _led_tout                bssCOMRAM    000010
-_main                    text0        007F54
+_main                    text0        007F32
 _mux_tout                bssCOMRAM    000017
 _myISR                   intcode      002008
+_tic_timer0              text2        007F38
 btemp                    temp         00001C
-end_of_initialization    cinit        007F84
+end_of_initialization    cinit        007F7E
 int$flags                temp         00001C
-int_func                 intcode_body 007F92
+int_func                 intcode_body 007F8C
 intlevel0                text         000000
 intlevel1                text         000000
 intlevel2                text         000000
@@ -380,7 +390,7 @@ mux_display@contdisp     bssCOMRAM    000018
 stackhi                  (abs)        0007FF
 stacklo                  (abs)        000060
 start                    init         002016
-start_initialization     cinit        007F5A
+start_initialization     cinit        007F54
 
 
 FUNCTION INFORMATION:
@@ -406,7 +416,7 @@ FUNCTION INFORMATION:
       Temps:          0       0       0       0       0       0       0       0       0
       Totals:         1       0       0       0       0       0       0       0       0
 Total ram usage:        1 bytes
- Hardware stack levels required when called:    1
+ Hardware stack levels required when called:    2
  This function calls:
 		Nothing
  This function is called by:
@@ -416,7 +426,7 @@ Total ram usage:        1 bytes
 
  *************** function _myISR *****************
  Defined at:
-		line 24 in file "main.c"
+		line 3 in file "Interrupciones.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -424,7 +434,7 @@ Total ram usage:        1 bytes
  Return value:  Size  Location     Type
 		None               void
  Registers used:
-		None
+		wreg, status,2, status,0, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -436,10 +446,40 @@ Total ram usage:        1 bytes
       Totals:        14       0       0       0       0       0       0       0       0
 Total ram usage:       14 bytes
  Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_tic_timer0
+ This function is called by:
+		Interrupt level 2
+ This function uses a non-reentrant model
+
+
+ *************** function _tic_timer0 *****************
+ Defined at:
+		line 121 in file "lemos.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
  This function calls:
 		Nothing
  This function is called by:
-		Interrupt level 2
+		_myISR
  This function uses a non-reentrant model
 
 
@@ -447,14 +487,23 @@ Total ram usage:       14 bytes
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
+Interrupciones.c
+		_myISR         		CODE           	2008	0000	131
+
+Interrupciones.c estimated size: 131
+
 shared
-		__initialization		CODE           	7F5A	0000	43
+		__initialization		CODE           	7F54	0000	43
 
 shared estimated size: 43
 
-main.c
-		_myISR         		CODE           	2008	0000	125
-		_main          		CODE           	7F54	0000	7
+lemos.c
+		_tic_timer0    		CODE           	7F38	0000	29
 
-main.c estimated size: 132
+lemos.c estimated size: 29
+
+main.c
+		_main          		CODE           	7F32	0000	7
+
+main.c estimated size: 7
 

@@ -1,5 +1,8 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
+"10801 /opt/microchip/xc8/v1.35/include/pic18f4550.h
+[v _TMR0IF `Vb ~T0 @X0 0 e@32658 ]
+"18 lemos.h
+[v _tic_timer0 `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -4143,84 +4146,36 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 152: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 154: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 156: extern __nonreentrant void _delay3(unsigned char);
-"21 confbits.h
-[p x PLLDIV=5 ]
+[; ;lemos.h: 15: void Send_Disp(unsigned char NroDisp,unsigned char Dato);
+[; ;lemos.h: 16: void Send_4Disp(unsigned char Umil,unsigned char Cent,unsigned char Dec,unsigned char Uni);
+[; ;lemos.h: 17: void leds(unsigned int velocidad);
+[; ;lemos.h: 18: void tic_timer0(void);
+"21 lemos.h
+[v _mux_tout `uc ~T0 @X0 1 e ]
+[v _bot_tout `uc ~T0 @X0 1 e ]
+[; ;lemos.h: 21: unsigned char mux_tout,bot_tout;
 "22
-[p x CPUDIV=OSC1_PLL2 ]
-"23
-[p x USBDIV=2 ]
-"24
-[p x FOSC=HSPLL_HS ]
-"25
-[p x FCMEN=OFF ]
-"26
-[p x IESO=OFF ]
-"27
-[p x PWRT=OFF ]
-"28
-[p x BOR=ON ]
-"29
-[p x BORV=3 ]
-"30
-[p x VREGEN=ON ]
-"31
-[p x WDT=OFF ]
-"32
-[p x WDTPS=32768 ]
-"33
-[p x MCLRE=ON ]
-"34
-[p x LPT1OSC=OFF ]
-"35
-[p x PBADEN=OFF ]
-"43
-[p x STVREN=ON ]
-"44
-[p x LVP=OFF ]
-"46
-[p x XINST=OFF ]
-"47
-[p x CP0=OFF ]
-"48
-[p x CP1=OFF ]
-"51
-[p x CPB=OFF ]
-"53
-[p x WRT0=OFF ]
-"54
-[p x WRT1=OFF ]
-"57
-[p x WRTB=OFF ]
-"58
-[p x WRTC=OFF ]
-"60
-[p x EBTR0=OFF ]
-"61
-[p x EBTR1=OFF ]
-"64
-[p x EBTRB=OFF ]
-"13 main.c
-[v _main `(v ~T0 @X0 1 ef ]
+[v _led_tout `ui ~T0 @X0 1 e ]
+[; ;lemos.h: 22: unsigned int led_tout;
+[v F4457 `(v ~T0 @X0 1 tf ]
+"3 Interrupciones.c
+[v _myISR `IF4457 ~T0 @X0 1 e ]
 {
-[; ;main.c: 13: void main(void) {
-[e :U _main ]
+[; ;Interrupciones.c: 3: void __interrupt myISR(void){
+[e :U _myISR ]
 [f ]
-"15
-[v _ejemplo `uc ~T0 @X0 1 a ]
-[; ;main.c: 15: unsigned char ejemplo=0;
-[e = _ejemplo -> -> 0 `i `uc ]
-[; ;main.c: 17: while(1){
-"17
-[e :U 559 ]
+[; ;Interrupciones.c: 8: if(TMR0IF){
+"8
+[e $ ! _TMR0IF 558  ]
 {
-"21
+[; ;Interrupciones.c: 9: tic_timer0();
+"9
+[e ( _tic_timer0 ..  ]
+"10
 }
 [e :U 558 ]
-"17
-[e $U 559  ]
-[e :U 560 ]
-[; ;main.c: 21: }
-[; ;main.c: 22: }
-"22
+[; ;Interrupciones.c: 10: }
+[; ;Interrupciones.c: 11: }
+"11
 [e :UE 557 ]
 }

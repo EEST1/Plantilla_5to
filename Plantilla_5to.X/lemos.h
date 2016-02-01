@@ -17,7 +17,7 @@ void Send_4Disp(unsigned char Umil,unsigned char Cent,unsigned char Dec,unsigned
 void leds(unsigned int velocidad);
 void tic_timer0(void);
 
-
+//variables globales
 unsigned char mux_tout,bot_tout;
 unsigned int  led_tout;
 
